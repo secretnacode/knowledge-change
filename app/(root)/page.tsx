@@ -1,5 +1,7 @@
+import { ButtonSmooth } from "@/components/client/ui/button";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { LinkComponent } from "@/components/ui/link";
 import {
   ArrowRight,
   CheckCircle2,
@@ -41,16 +43,19 @@ const LandingPageNav: FC = () => (
         </div>
 
         <div className="flex items-center gap-4">
-          <Button size="sm" className="hover:bg-secondary hover:text-white ">
+          <LinkComponent
+            link="/authentication"
+            className="hover:bg-secondary hover:text-white "
+          >
             Sign In
-          </Button>
+          </LinkComponent>
 
-          <Button
-            size="sm"
+          <ButtonSmooth
+            id="howSection"
             className="bg-primary hover:bg-primary/90 text-white "
           >
             Get Started
-          </Button>
+          </ButtonSmooth>
         </div>
       </div>
     </div>
@@ -69,7 +74,10 @@ const HeroSection: FC = () => {
     { icon: "🌍", label: "Languages" },
   ];
   return (
-    <section className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
+    <section
+      className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8"
+      id="heroSection"
+    >
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
@@ -87,19 +95,21 @@ const HeroSection: FC = () => {
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Button
+            <LinkComponent
+              link="/authentication"
               size="lg"
               className="gap-2 bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               Start Trading Skills <ArrowRight className="h-5 w-5" />
-            </Button>
+            </LinkComponent>
 
-            <Button
+            <ButtonSmooth
+              id="howSection"
               size="lg"
               className="hover:bg-secondary hover:text-white border-border border shadow-sm"
             >
               See How It Works
-            </Button>
+            </ButtonSmooth>
           </div>
         </div>
 
@@ -150,7 +160,10 @@ const HowSection: FC = () => {
   ];
 
   return (
-    <section className="border-t border-border px-4 py-20 sm:px-6 lg:px-8">
+    <section
+      className="border-t border-border px-4 py-20 sm:px-6 lg:px-8"
+      id="howSection"
+    >
       <div className="mx-auto max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
@@ -317,12 +330,13 @@ const StartSection: FC = () => {
         </p>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
-          <Button
+          <LinkComponent
+            link="/authentication"
             size="lg"
             className="gap-2 bg-primary hover:bg-primary/90 text-primary-foreground"
           >
             Create Your Profile <ArrowRight className="h-5 w-5" />
-          </Button>
+          </LinkComponent>
 
           <Button
             size="lg"
@@ -374,12 +388,12 @@ const FooterSection: FC = () => {
               <ul className="space-y-2">
                 {column.links.map((link) => (
                   <li key={link}>
-                    <a
-                      href="#"
+                    <ButtonSmooth
+                      id=""
                       className="text-sm text-muted-foreground hover:text-foreground"
                     >
                       {link}
-                    </a>
+                    </ButtonSmooth>
                   </li>
                 ))}
               </ul>

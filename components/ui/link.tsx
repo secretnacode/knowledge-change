@@ -1,19 +1,20 @@
-import { buttonPropType } from "@/types";
+import { linkComponentType } from "@/types";
 import { btnSize } from "@/utils/helper";
+import Link from "next/link";
 import { FC } from "react";
 
-export const Button: FC<buttonPropType> = ({
-  className = "",
+export const LinkComponent: FC<linkComponentType> = ({
+  link,
   children,
+  className,
   size = "sm",
-  ...props
 }) => {
   return (
-    <button
+    <Link
+      href={link}
       className={`${className} ${btnSize({ size })} button smooth-transition`}
-      {...props}
     >
       {children}
-    </button>
+    </Link>
   );
 };

@@ -117,6 +117,9 @@
   .smooth-transition {
     @apply transition-all duration-100 ease-linear;
   }
+  .button {
+    @apply rounded-md cursor-pointer text-sm font-medium flex flex-row items-center;
+  }
 }
 
 @layer base {
