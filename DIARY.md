@@ -9,3 +9,18 @@ TODO:
 ❌  add the links per button where it should go (e.g. auth page, hero section)
 
 ---
+
+---
+
+1/28/26 (authentication)
+
+did the landing page function and added the clerk for easy authentication in authentication page, it doesnt have a ui yet
+
+TODO:
+✅ add the links per button where it should go (e.g. auth page, hero section)
+❌ make a navigation button for the landing page so the user can go to each section easily
+❌ in the landing page, the cards that lists all the skills under the hero section, it would be better if that's a bg design for the hero section
+and its kinda tilted (like this https://webflow.com/blog/website-hero-image)
+❌ make a ui for authentication page
+
+---
