@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
+
 :root {
   --background: oklch(0.98 0.001 240);
   --foreground: oklch(0.15 0.03 240);
@@ -129,4 +130,9 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
 }
